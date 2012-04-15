@@ -62,10 +62,6 @@ namespace ColourSearchEngine
             get { return _db.Images.Length; }
         }
 
-        public SearchEngine()
-        {
-        }
-
         public void RebuildDatabase(string fileLocation)
         {
             string[] images = new[]

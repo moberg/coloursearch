@@ -6,24 +6,22 @@ using Mono.Options;
 
 namespace ColourSearch
 {
-
     class Program
     {
-        private const int Port = 9200;
-
         static void Main(string[] args)
         {
-
             bool show_help = false;
             bool rebuild = false;
             string staticFilesDir = Path.Combine(Directory.GetCurrentDirectory(), "public");
             string imagesDir = Path.Combine(staticFilesDir, "Content\\Images");
             string database = "database.xml";
             int port = 9200;
+            bool multithreaded = false;
             
             var p = new OptionSet() {
                 { "p|port=", "port to run the service on.", v => port = int.Parse(v) },
                 { "d|database=", "database file.", v => database = v },
+                { "m|multithreaded", "run multithreaded server.", v => multithreaded = v != null },
                 { "i|images=", "images directory.", v => imagesDir = v },
                 { "s|staticfiles=", "static files directory.", v => staticFilesDir = v },
                 { "r|rebuild", "rebuild the database.", v => rebuild = v != null },
@@ -49,11 +47,14 @@ namespace ColourSearch
                 return;
             }
 
-            Console.WriteLine("Starting search engine. Database: " + database);
+            Console.WriteLine("Starting search engine, database: " + database);
             var searchEngine = new SearchEngine();
             
             if (rebuild || !File.Exists(database))
             {
+                if (!Directory.Exists(imagesDir))
+                    Directory.CreateDirectory(imagesDir);
+
                 searchEngine.RebuildDatabase(imagesDir);
                 searchEngine.SaveDatabase(database);
             }
@@ -64,7 +65,7 @@ namespace ColourSearch
             
             Console.WriteLine("Images loaded, {0} images", searchEngine.IndexSize);
 
-            var service = new VerySimpleWebServer(port, searchEngine, false);
+            var service = new VerySimpleWebServer(port, searchEngine, multithreaded);
             service.Run();
         }
 

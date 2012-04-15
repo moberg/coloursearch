@@ -59,40 +59,105 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="public\coloursearch.js" />
-    <Content Include="public\Content\Copy of Site.css" />
-    <Content Include="public\Content\farbtastic\CHANGELOG.html" />
-    <Content Include="public\Content\farbtastic\demo1.html" />
-    <Content Include="public\Content\farbtastic\demo2.html" />
-    <Content Include="public\Content\farbtastic\farbtastic.css" />
-    <Content Include="public\Content\farbtastic\farbtastic.js" />
-    <Content Include="public\Content\farbtastic\LICENSE.txt" />
-    <Content Include="public\Content\farbtastic\marker.png" />
-    <Content Include="public\Content\farbtastic\mask.png" />
-    <Content Include="public\Content\farbtastic\README.html" />
-    <Content Include="public\Content\farbtastic\wheel.png" />
-    <Content Include="public\Content\Site.css" />
-    <Content Include="public\index.html" />
-    <Content Include="public\Scripts\jquery-1.5.1-vsdoc.js" />
-    <Content Include="public\Scripts\jquery-1.5.1.js" />
-    <Content Include="public\Scripts\jquery-1.5.1.min.js" />
-    <Content Include="public\Scripts\jquery-ui-1.8.11.js" />
-    <Content Include="public\Scripts\jquery-ui-1.8.11.min.js" />
-    <Content Include="public\Scripts\jquery.unobtrusive-ajax.js" />
-    <Content Include="public\Scripts\jquery.unobtrusive-ajax.min.js" />
-    <Content Include="public\Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="public\Scripts\jquery.validate.js" />
-    <Content Include="public\Scripts\jquery.validate.min.js" />
-    <Content Include="public\Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="public\Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="public\Scripts\MicrosoftAjax.debug.js" />
-    <Content Include="public\Scripts\MicrosoftAjax.js" />
-    <Content Include="public\Scripts\MicrosoftMvcAjax.debug.js" />
-    <Content Include="public\Scripts\MicrosoftMvcAjax.js" />
-    <Content Include="public\Scripts\MicrosoftMvcValidation.debug.js" />
-    <Content Include="public\Scripts\MicrosoftMvcValidation.js" />
-    <Content Include="public\Scripts\modernizr-1.7.js" />
-    <Content Include="public\Scripts\modernizr-1.7.min.js" />
+    <Content Include="public\coloursearch.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="public\Content\farbtastic\CHANGELOG.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="public\Content\farbtastic\demo1.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="public\Content\farbtastic\demo2.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="public\Content\farbtastic\farbtastic.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="public\Content\farbtastic\farbtastic.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="public\Content\farbtastic\LICENSE.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="public\Content\farbtastic\marker.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="public\Content\farbtastic\mask.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="public\Content\farbtastic\README.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="public\Content\farbtastic\wheel.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="public\Content\Site.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="public\index.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="public\Scripts\jquery-1.5.1-vsdoc.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="public\Scripts\jquery-1.5.1.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="public\Scripts\jquery-1.5.1.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="public\Scripts\jquery-ui-1.8.11.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="public\Scripts\jquery-ui-1.8.11.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="public\Scripts\jquery.unobtrusive-ajax.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="public\Scripts\jquery.unobtrusive-ajax.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="public\Scripts\jquery.validate-vsdoc.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="public\Scripts\jquery.validate.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="public\Scripts\jquery.validate.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="public\Scripts\jquery.validate.unobtrusive.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="public\Scripts\jquery.validate.unobtrusive.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="public\Scripts\MicrosoftAjax.debug.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="public\Scripts\MicrosoftAjax.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="public\Scripts\MicrosoftMvcAjax.debug.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="public\Scripts\MicrosoftMvcAjax.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="public\Scripts\MicrosoftMvcValidation.debug.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="public\Scripts\MicrosoftMvcValidation.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="public\Scripts\modernizr-1.7.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="public\Scripts\modernizr-1.7.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ColourSearchEngine\ColourSearchEngine.csproj">

@@ -36,7 +36,7 @@
 
                 for (var i = 0; i < response.result.length; i++) {
                     var image = response.result[i];
-                    resultDiv.append("<img src='/Content/Wedding/" + image.filename + "' width='200' title='" + image.distance + "' />");
+                    resultDiv.append("<img src='/Content/Images/" + image.filename + "' width='200' title='" + image.distance + "' />");
                 }
             });
     };
