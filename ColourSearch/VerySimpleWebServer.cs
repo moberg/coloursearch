@@ -22,16 +22,14 @@ namespace ColourSearch
         private readonly List<Tuple<string, IHandler>> _routes
             = new List<Tuple<string, IHandler>>();
 
-        public static string StaticFilesDir = Path.Combine(Directory.GetCurrentDirectory(), "public");
-
-        public VerySimpleWebServer(int port, SearchEngine searchEngine, bool multithreaded = false)
+        public VerySimpleWebServer(int port, SearchEngine searchEngine, string staticFilesDir, bool multithreaded)
         {
             _port = port;
             _searchEngine = searchEngine;
             _multithreaded = multithreaded;
 
             _routes.Add(Tuple.Create("/search", (IHandler)new SearchHandler(_searchEngine)));
-            _routes.Add(Tuple.Create("/", (IHandler)new StaticFileHandler(StaticFilesDir)));
+            _routes.Add(Tuple.Create("/", (IHandler)new StaticFileHandler(staticFilesDir)));
         }
 
         public void Run()

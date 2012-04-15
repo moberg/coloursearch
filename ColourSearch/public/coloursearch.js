@@ -24,7 +24,7 @@
 
         resultDiv.append("<h2>" + compareMethod + "</h2>");
 
-        $.getJSON("http://localhost:9200/search/?callback=?",
+        $.getJSON("/search/?callback=?",
             {
                 colour: colour,
                 page: 0,

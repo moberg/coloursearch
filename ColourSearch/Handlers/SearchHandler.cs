@@ -27,6 +27,9 @@ namespace ColourSearch.Handlers
             ColorSpace colorSpace;
             Enum.TryParse(ctx.Request.QueryString["colourspace"], true, out colorSpace);
 
+            if (colorSpace != ColorSpace.Rgb)
+                throw new Exception("Only RBG is supported at the moment");
+
             SearchMethod searchMethod;
             Enum.TryParse(ctx.Request.QueryString["comparemethod"], true, out searchMethod);
 

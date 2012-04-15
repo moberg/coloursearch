@@ -12,8 +12,8 @@ namespace ColourSearch
         {
             bool show_help = false;
             bool rebuild = false;
-            string staticFilesDir = Path.Combine(Directory.GetCurrentDirectory(), "public");
-            string imagesDir = Path.Combine(staticFilesDir, "Content\\Images");
+            string staticFilesDir = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), "public"));
+            string imagesDir = Path.GetFullPath(Path.Combine(Path.Combine(staticFilesDir, "Content"), "Images"));
             string database = "database.xml";
             int port = 9200;
             bool multithreaded = false;
@@ -65,7 +65,7 @@ namespace ColourSearch
             
             Console.WriteLine("Images loaded, {0} images", searchEngine.IndexSize);
 
-            var service = new VerySimpleWebServer(port, searchEngine, multithreaded);
+            var service = new VerySimpleWebServer(port, searchEngine, staticFilesDir, multithreaded);
             service.Run();
         }
 

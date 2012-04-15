@@ -18,7 +18,11 @@ namespace ColourSearch.Handlers
 
         public bool ProcessRequest(HttpListenerContext ctx)
         {
-            string request = WebUtility.HtmlDecode(ctx.Request.RawUrl).Substring(1).Replace("/", "\\");
+            string request = WebUtility.HtmlDecode(ctx.Request.RawUrl).Substring(1);
+
+            if (Path.PathSeparator == '\\')
+                request = request.Replace("/", "\\");
+
             if (request == "")
                 request = "index.html";
 

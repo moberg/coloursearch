@@ -13,7 +13,7 @@ namespace ColourSearchEngine
             return new Histogram
                        {
                            RgbHistogram = GetRgbHistogram(source),
-                           HsvHistogram = GetHsvHistogram(source)
+                           //HsvHistogram = GetHsvHistogram(source)
                        };
         }
 
