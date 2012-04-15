@@ -15,14 +15,14 @@ Then browse to http://localhost:9200
 
 
 ### Options
- .\coloursearch.exe --help
-Usage: coloursearch [OPTIONS]+ message
+    .\coloursearch.exe --help
+    Usage: coloursearch [OPTIONS]+ message
 
-Options:
-  -p, --port=VALUE           port to run the service on.
-  -d, --database=VALUE       database file.
-  -m, --multithreaded        run multithreaded server.
-  -i, --images=VALUE         images directory.
-  -s, --staticfiles=VALUE    static files directory.
-  -r, --rebuild              rebuild the database.
-  -h, --help                 show this message and exit
+    Options:
+      -p, --port=VALUE           port to run the service on.
+      -d, --database=VALUE       database file.
+      -m, --multithreaded        run multithreaded server.
+      -i, --images=VALUE         images directory.
+      -s, --staticfiles=VALUE    static files directory.
+      -r, --rebuild              rebuild the database.
+      -h, --help                 show this message and exit
